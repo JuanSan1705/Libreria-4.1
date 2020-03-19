@@ -15,6 +15,12 @@ class PruebaLab(unittest.TestCase):
         y2 = [(-1, -4), (2, -3), (-7, 6), (-1, 1), (-5, -3), (5, 0), (5, 8), (4, -4), (8, -7), (2, -7)]
         self.assertEqual(Libreria.AmplitudTrans(y, y2), (-0.00014085829655366726, -0.0008921025448398911))
 
+    def test_CalculoMedia(self):
+        Matriz = [[(1, 0), (0, -1)], [(0, 1), (2, 0)]]
+        Ket = [[(math.sqrt(2) / 2, 0)], [(0, math.sqrt(2) / 2)]]
+        self.assertEqual(Libreria.CalculoMedia(Matriz, Ket), [[(-1.5000000000000004, 0.0), (0.0, -1.0)], [(0.0, 1.0), (-0.5000000000000004, 0.0)]])
+
+
 
 
 if __name__ == "__main__":
